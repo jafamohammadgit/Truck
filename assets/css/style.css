@@ -1,0 +1,31 @@
+@import url(./_font.css);
+/* start css style */
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  direction: rtl;
+}
+
+body,
+html {
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
