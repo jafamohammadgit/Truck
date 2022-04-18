@@ -29,3 +29,211 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+.wrapper {
+  width: 550px;
+  height: 350px;
+  margin: 130px auto;
+  overflow: hidden;
+  background-color: rgb(84, 187, 153);
+  border-radius: 5px;
+  position: relative;
+}
+
+.road {
+  padding-bottom: 100px;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  border-top: 3px solid rgb(255, 255, 255);
+  z-index: 100;
+  background-color: rgb(84, 187, 153);
+  overflow: hidden;
+}
+
+.mountain {
+  width: 200px;
+  position: absolute;
+  height: 125px;
+  transform: rotate(45deg);
+  bottom: 3px;
+  right: 100px;
+  background-color: #66e1b8;
+  right: -100%;
+  box-shadow: 370px -390px 2px 3px #66e1b8;
+  animation: animation 40s 2s linear infinite;
+}
+
+.mountain::before {
+  content: "";
+  width: 42px;
+  height: 100px;
+  position: absolute;
+  top: 93px;
+  left: -19px;
+  right: 197px;
+  background-color: #66e1b8;
+  box-shadow: 301px -293px 2px 3px #66e1b8;
+}
+.mountain::after {
+  content: "";
+  width: 88px;
+  height: 104px;
+  position: absolute;
+  top: -25px;
+  left: -70px;
+  right: 46px;
+  background-color: #66e1b8;
+  box-shadow: 232px -236px 2px 3px #66e1b8;
+}
+
+.hill {
+  position: absolute;
+  width: 345px;
+  height: 74px;
+  bottom: 51px;
+  border-radius: 100%;
+  background: #6af5c8;
+  right: -200%;
+  box-shadow: -58px -1px 2px 1px #55cea6, 459px 5px 0px 18px #6af5c8;
+  animation: animation 10s linear 2s infinite;
+}
+
+.tree {
+  position: absolute;
+  height: 100px;
+  bottom: 130px;
+  transform: rotate(90deg);
+  right: -150%;
+  animation: animation 10s linear infinite;
+}
+.tree::before {
+  content: "";
+  width: 10px;
+  position: absolute;
+  height: 10px;
+  border-top: 27px solid #54bb99;
+  border-right: 96px solid #009966;
+  border-bottom: 28px solid #54bb99;
+  right: -47px;
+  bottom: -27px;
+  border-radius: 25px;
+}
+
+.tree::after {
+  content: "";
+  width: 30px;
+  height: 11px;
+  background-color: #3c896f;
+  bottom: 0px;
+  right: -77px;
+  position: absolute;
+  box-shadow: 1px 1px 1px 1px rgb(39, 36, 36);
+}
+
+.house {
+  width: 90px;
+  height: 65px;
+  position: absolute;
+  border: 3px solid #fff;
+  background: #54bb99;
+  bottom: 100px;
+  right: -200%;
+  animation: animation 15s linear infinite;
+}
+
+.house::before {
+  box-shadow: -47px 0px 0px 0px #ffffff, -22px 32px 1px 2px lightgrey;
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  right: 10px;
+  top: 10px;
+  border-radius: 2px;
+}
+
+.house::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 78px;
+  right: 21px;
+  top: -78px;
+  border-top: 20px solid #54bb99;
+  border-right: 20px solid #fff;
+  border-bottom: 20px solid #54bb99;
+  transform: rotate(90deg);
+}
+
+.bulletin-board {
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  border: 1px solid #fff;
+  bottom: 130px;
+  right: 200px;
+  box-shadow: 2px 2px 0px 0px white;
+  border-radius: 3px;
+  right: -200%;
+  animation: animation 18s linear 3;
+}
+
+.bulletin-board::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin: 2px;
+  right: 1px;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0px 15px 0px 0px #ff8500, 0px 31px 0px 0px #033000;
+}
+
+.bulletin-board::before {
+  position: absolute;
+  width: 3px;
+  height: 25px;
+  background-color: white;
+  content: "";
+  bottom: -29px;
+  right: 6px;
+}
+
+.truck {
+  position: absolute;
+  bottom: 88px;
+  right: 300px;
+}
+
+.truck::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  right: 102px;
+  border-radius: 10px;
+  height: 2px;
+  background-color: #fff;
+  top: 10px;
+  box-shadow: -8px 8px 0px 0px #fff;
+  animation: wind 2s ease infinite alternate;
+  transform: translateY(10px);
+}
+
+@keyframes animation {
+  100% {
+    right: 200%;
+  }
+}
+
+@keyframes wind {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
